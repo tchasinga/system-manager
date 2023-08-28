@@ -1,31 +1,24 @@
 // express must be used everywhere in order to access use all request if needed
 const express = require('express');
 const router = express.Router();
+const {createWorkout , getWorkouts,
+     getWorkout , deleteWorkout,updateWorkout} = require('../controller/workoutController')
+
 
 
 // Making a GET request
-router.get('/', (req, res) => {
-    res.json({ mssg: "Get your all data workouts" });
-});
+router.get('/', getWorkouts)
 
 // Making a single GET request using ID
-router.get('/:id', (req, res) => {
-    res.json({ mssg: "Get your single data" });
-});
+router.get('/:id', getWorkout)
 
 // Making a POST request
-router.post('/', (req, res) => {
-    res.json({ mssg: "Post your data" });
-});
+router.post('/', createWorkout) 
 
 // Making a DELETE request
-router.delete('/:id', (req, res) => {
-    res.json({ mssg: "Delete your data" });
-});
+router.delete('/:id', deleteWorkout);
 
 // Making a PUT request
-router.patch('/:id', (req, res) => {
-    res.json({ mssg: "Put your data" }); 
-});
+router.patch('/:id', updateWorkout);
 
-module.exports = router;
+module.exports = router; 
