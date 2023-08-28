@@ -24,8 +24,8 @@ const myLink = "mongodb+srv://devmanager:jack202050081@managers.yhrutkj.mongodb.
 
 mongoose.connect(myLink)
     .then(() => {
-        app.listen(process.env.PORT, () => {
-            console.log('Congratulations! Now you are live on Atlas at port ', process.env.PORT);
+        app.listen(4000, () => {
+            console.log('Congratulations! Now you are live on Atlas at port ', 4000);
         });
     })
     .catch((error) => {
