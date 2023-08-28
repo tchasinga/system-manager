@@ -15,11 +15,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cd ../f react-scripts build",
+    "start": "node Backend/server.js",
+    "build": "cd Backend && npm install && cd ../frontend && npm install && npm run build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev" : "node Backend/server.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
