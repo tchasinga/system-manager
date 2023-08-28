@@ -1,0 +1,28 @@
+To setup full backend mern side 
+
+
+===========================
+to run the file 
+
+node sever.js
+
+in script
+
+ "dev": "nodemon server.js"
+===========================
+
+1 Initiliaze npm 
+ 
+ npm init -y
+
+2 Install dependencies
+
+* npm install express
+
+* npm install mongoose
+
+* npm install dotenv
+
+live tracking line of port 
+
+* npm install nodemon 
