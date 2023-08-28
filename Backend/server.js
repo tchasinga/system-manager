@@ -19,12 +19,13 @@ app.use((req, res, next) => {
 
 // Set up Content Security Policy (CSP) headers
 app.use((req, res, next) => {
-  res.setHeader(
-    'Content-Security-Policy',
-    "default-src data: https://www.google-analytics.com; font-src 'self' https://management-system-e85c.onrender.com;"
-  );
-  next();
-});
+    res.setHeader(
+      'Content-Security-Policy',
+      "default-src data: https://www.google-analytics.com; font-src 'self' https://management-system-t3or.onrender.com https://fonts.googleapis.com;"
+    );
+    next();
+  });
+  
 
 // Set up routes for /api/workouts
 app.use('/api/workouts', workoutRoutes);
