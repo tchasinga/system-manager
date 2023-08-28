@@ -1,10 +1,21 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
+const helmet = require('helmet');
 
 // Call workout here to access on it 
 const workoutRoutes = require('./routes/workouts')
 
+// Use helmet to set CSP headers
+app.use(
+    helmet.contentSecurityPolicy({
+      directives: {
+        defaultSrc: ["'self'", 'https://www.google-analytics.com'],
+        fontSrc: ["'self'", 'https://management-system-e85c.onrender.com'],
+      },
+    })
+  );
+  
 
 // To use express must call it back
 const app = express()
