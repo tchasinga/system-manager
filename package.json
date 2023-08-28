@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd Backend && npm install && cd ../frontend && npm install && npm run build",
+    "build": "cd ../frontend && npm install && npm run build && cd Backend && npm install  ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Backend/server.js",
     "dev": "nodemon  Backend/server.js"
