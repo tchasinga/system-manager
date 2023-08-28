@@ -13,8 +13,17 @@ app.use(express.json());
 
 // Logging middleware
 app.use((req, res, next) => {
-    console.log(req.path, req.method);
-    next();
+  console.log(req.path, req.method);
+  next();
+});
+
+// Set up Content Security Policy (CSP) headers
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src data: https://www.google-analytics.com; font-src 'self' https://management-system-e85c.onrender.com;"
+  );
+  next();
 });
 
 // Set up routes for /api/workouts
