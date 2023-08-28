@@ -4,11 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "cd Backend && npm install && cd ../frontend && npm install && npm run build",
+    "build-backend": "cd Backend && npm install && npm run build",
+    "build-frontend": "cd frontend && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Backend/server.js",
-    "dev": "nodemon  Backend/server.js"
+    "start-backend": "node Backend/server.js",
+    "start-frontend": "cd frontend && npm start",
+    "dev": "nodemon Backend/server.js"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
