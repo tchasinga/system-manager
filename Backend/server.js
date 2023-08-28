@@ -1,46 +1,36 @@
-const express = require('express')
-require('dotenv').config()
-const mongoose = require('mongoose')
-const helmet = require('helmet');
+const express = require('express');
+require('dotenv').config();
+const mongoose = require('mongoose');
 
-// Call workout here to access on it 
-const workoutRoutes = require('./routes/workouts')
+// Call workout here to access on it
+const workoutRoutes = require('./routes/workouts');
 
-// Use helmet to set CSP headers
-app.use(
-    helmet.contentSecurityPolicy({
-      directives: {
-        defaultSrc: ["'self'", 'https://www.google-analytics.com'],
-        fontSrc: ["'self'", 'https://management-system-t3or.onrender.com'],
-      },
-    })
-  );
-  
+// To use express, create an app instance
+const app = express();
 
-// To use express must call it back
-const app = express()
+// Middleware to parse JSON
+app.use(express.json());
 
-// To use Midowaller 
-app.use(express.json())
-app.use((req, res , next) =>{
-    console.log(req.path, req.method)
-    next()
-})
+// Logging middleware
+app.use((req, res, next) => {
+    console.log(req.path, req.method);
+    next();
+});
 
-// making a request object router
-app.use('/api/workouts',workoutRoutes)
+// Set up routes for /api/workouts
+app.use('/api/workouts', workoutRoutes);
 
-//Connect to dataBase side 
-const myLink = "mongodb+srv://devmanager:jack202050081@managers.yhrutkj.mongodb.net/mymanager?retryWrites=true&w=majority";
+// Connect to the database
+const myLink =
+  'mongodb+srv://devmanager:jack202050081@managers.yhrutkj.mongodb.net/mymanager?retryWrites=true&w=majority';
 
-mongoose.connect(myLink)
-    .then(() => {
-        app.listen(4000, () => {
-            console.log('Congratulations! Now you are live on Atlas at port ', 4000);
-        });
-    })
-    .catch((error) => {
-        console.error('Error connecting to MongoDB:', error);
+mongoose
+  .connect(myLink)
+  .then(() => {
+    app.listen(4000, () => {
+      console.log('Congratulations! Now you are live on Atlas at port', 4000);
     });
-
-// Listen for request port
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
