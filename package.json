@@ -3,13 +3,12 @@
     "version": "1.0.0",
     "description": "MERN Application",
     "scripts": {
-      "start": "npm run start-backend && npm run start-frontend",
-      "start-backend": "node Backend/server.js",
-      "start-frontend": "cd frontend && npm start",
-      "build": "npm run build-backend && npm run build-frontend",
-      "build-backend": "cd Backend && npm install",
-      "build-frontend": "cd frontend && npm install && npm run build"
-    },
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node Backend/server.js",
+        "dev": "nodemon  Backend/server.js",
+        "build": "cd Backend && npm install && cd ../frontend && npm install && npm run build"
+
+      },
     "dependencies": {},
     "devDependencies": {}
   }
