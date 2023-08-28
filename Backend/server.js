@@ -11,7 +11,7 @@ app.use(
     helmet.contentSecurityPolicy({
       directives: {
         defaultSrc: ["'self'", 'https://www.google-analytics.com'],
-        fontSrc: ["'self'", 'https://management-system-e85c.onrender.com'],
+        fontSrc: ["'self'", 'https://management-system-t3or.onrender.com'],
       },
     })
   );
