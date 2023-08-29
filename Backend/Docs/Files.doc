@@ -1,0 +1,40 @@
+To setup full backend mern side 
+
+
+===========================
+to run the file 
+
+node sever.js
+
+in script
+
+ "dev": "nodemon server.js"
+===========================
+
+1 Initiliaze npm 
+ 
+ npm init -y
+
+2 Install dependencies
+
+* npm install express
+
+* npm install mongoose
+
+* npm install dotenv
+
+live tracking line of port 
+
+* npm install nodemon 
+
+=============================================
+
+Deployement of Backend on render 
+
+1 Open render.com
+2 Open Webservice 
+
+3. name project : "any-name",
+4. root-folder : ./Backend
+5. build-command : npm install
+6. start-command : npm start
