@@ -26,3 +26,15 @@ in script
 live tracking line of port 
 
 * npm install nodemon 
+
+=============================================
+
+Deployement of Backend on render 
+
+1 Open render.com
+2 Open Webservice 
+
+3. name project : "any-name",
+4. root-folder : ./Backend
+5. build-command : npm install
+6. start-command : npm start
