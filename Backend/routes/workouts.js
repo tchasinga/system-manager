@@ -4,7 +4,7 @@ const router = express.Router();
 const {createWorkout , getWorkouts,
      getWorkout , deleteWorkout,updateWorkout} = require('../controller/workoutController')
 
-
+ 
 
 // Making a GET request
 router.get('/', getWorkouts)
