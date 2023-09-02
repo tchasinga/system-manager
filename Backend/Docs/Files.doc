@@ -38,3 +38,11 @@ Deployement of Backend on render
 4. root-folder : ./Backend
 5. build-command : npm install
 6. start-command : npm start
+
+=====================================================
+
+Add Material Ui in react project 
+
+```
+npm install @mui/material @mui/icons-material
+```
