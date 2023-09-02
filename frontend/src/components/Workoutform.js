@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {useWorkoutsContext} from '../hooks/useWorkoutsContext';
+import { Tooltip } from '@mui/material';
 
 
 const WorkoutForm = () => {
@@ -63,7 +64,9 @@ const WorkoutForm = () => {
         value={reps} 
       />
 
-      <button>Add...</button>
+    <Tooltip title="add new program" arrow placement="bottom">
+    <button>Add...</button>
+    </Tooltip>
       {error && <div className="error">{error}</div>}
     </form>
   )
