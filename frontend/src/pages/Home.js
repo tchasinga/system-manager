@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import WorkoutDetails from '../components/WorkoutDetails'; // Adjust the casing here
-import WorkoutForm from '../components/WorkoutForm'; // Adjust the casing here
-import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
-
+import WorkoutDetails from '../components/workoutDetails'; // Adjust the casing here
+import WorkoutForm from '../components/Workoutform'
+import {useWorkoutsContext} from '../hooks/useWorkoutsContext';
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
   const [isPending, setIsPending] = useState(true);
@@ -12,7 +11,7 @@ const Home = () => {
     const fetchWorkout = async () => {
       try {
         // Simulate a 3-second delay
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 30000));
 
         const response = await fetch('https://management-api-location.onrender.com/api/workouts');
         if (!response.ok) {
