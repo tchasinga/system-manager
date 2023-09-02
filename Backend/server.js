@@ -10,13 +10,13 @@ const workoutRoutes = require("./routes/workouts");
 const app = express();
 
 // Middleware to parse JSON
-// app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "https://management-system-xwbu.onrender.com",
-//     credentials: true,
-//   })
-// );
+app.use(express.json());
+app.use(
+  cors({
+    origin: "https://management-tasking.onrender.com",
+    credentials: true,
+  })
+);
 
 // Logging middleware
 app.use((req, res, next) => {
