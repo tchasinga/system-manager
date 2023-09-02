@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://management-system-xwbu.onrender.com",
+    origin: "https://tasking-management.onrender.com/",
     credentials: true,
   })
 );
