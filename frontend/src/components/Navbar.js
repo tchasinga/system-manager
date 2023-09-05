@@ -4,7 +4,7 @@
     return (
         <header>
             <div className="container">
-                <Link to="">Register data</Link>
+                <Link to="/Animtion">Register data</Link>
             </div>
         </header>
     )

@@ -97,3 +97,12 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 }
+
+@media only  screen and (max-width : 468px) {
+
+  .majorContainer{
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+}
