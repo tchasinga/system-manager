@@ -1,6 +1,8 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
+
+
 /* layout */
 :root {
   --primary: #1aac83;
@@ -105,4 +107,48 @@ div.error {
     width: 90%;
   }
   
+}
+
+/* Apply styles to the parent container */
+.textField {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply styles to the form element */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Apply styles to the text fields */
+TextField {
+  width: 100%;
+}
+
+/* Apply specific styles to individual text fields */
+label[for="standard-basic"] {
+  color: #555;
+  font-weight: bold;
+}
+
+/* Apply styles to the button element if needed */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Add hover effect to the submit button */
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
