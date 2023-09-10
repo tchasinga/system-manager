@@ -50,14 +50,14 @@ const WorkoutForm = () => {
         value={title}
       />
 
-      <label>Load (in kg):</label>
+      <label>Place to reserve:</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
         value={load}
       />
 
-      <label>Number of Reps:</label>
+      <label>Number of phone:</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
@@ -65,7 +65,7 @@ const WorkoutForm = () => {
       />
 
     <Tooltip title="add new program" arrow placement="bottom">
-    <button>Add...</button>
+    <button>send request</button>
     </Tooltip>
       {error && <div className="error">{error}</div>}
     </form>
