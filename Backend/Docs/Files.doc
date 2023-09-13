@@ -6,7 +6,7 @@ to run the file
 
 node sever.js
 
-in script
+in script , that will  help you to track all  modifications.. 
 
  "dev": "nodemon server.js"
 ===========================
