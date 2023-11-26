@@ -10,7 +10,7 @@ export const useLogin = () =>{
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('https://management-api-location.onrender.com/api/user/login', {
+        const response = await fetch('https://managament-service-api.onrender.com/api/user/login', {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
