@@ -10,7 +10,7 @@ export const useSingup = () =>{
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('https://management-api-location.onrender.com/api/user/signup', {
+        const response = await fetch('https://management-api-location.onrender.com/api/user/signup',{
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
