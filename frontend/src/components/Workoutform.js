@@ -41,23 +41,23 @@ const WorkoutForm = () => {
 
   return (
     <form className="create" onSubmit={handleSubmit}> 
-      <h3>Make your reservation</h3>
+      <h3>Make your workout </h3>
 
-      <label>Set your name : </label>
+      <label>Set your Exercise : </label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
         value={title}
       />
 
-      <label>Place to reserve:</label>
+      <label>Loads in (in ):</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
         value={load}
       />
 
-      <label>Number of phone:</label>
+      <label>Reps :</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 

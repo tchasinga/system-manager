@@ -5,7 +5,7 @@ import { Tooltip } from '@mui/material';
         <header>
             <div className="container">
                <Tooltip title='this is an header..' arrow placement='right'>
-               <Link to="/Animtion">Register data</Link>
+               <Link to="/Animtion">Workout program</Link>
                </Tooltip>
             </div>
         </header>
