@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://management-system-xwbu.onrender.com",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -28,8 +28,7 @@ app.use((req, res, next) => {
 app.use("/api/workouts", workoutRoutes);
 
 // Connect to the database
-const myLink =
-  "mongodb+srv://devmanager:jack202050081@managers.yhrutkj.mongodb.net/mymanager?retryWrites=true&w=majority";
+const myLink = process.env.MONGO_URI;
 
 mongoose
   .connect(myLink)
