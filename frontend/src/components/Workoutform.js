@@ -65,7 +65,7 @@ const WorkoutForm = () => {
       />
 
     <Tooltip title="add new program" arrow placement="bottom">
-    <button>Add...</button>
+    <button>Add program...</button>
     </Tooltip>
       {error && <div className="error">{error}</div>}
     </form>
