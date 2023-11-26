@@ -117,6 +117,7 @@ nav button {
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 nav a {
