@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {useWorkoutsContext} from '../hooks/useWorkoutsContext';
 import { Tooltip } from '@mui/material';
+import {useAuthContext} from '../hooks/useAuthContext';
 
 
 const WorkoutForm = () => {
@@ -10,9 +11,16 @@ const WorkoutForm = () => {
   const [load, setLoad] = useState('')
   const [reps, setReps] = useState('')
   const [error, setError] = useState(null)
+  const {user} = useAuthContext()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    // If we miss user registration, we can't add new workout...
+    if(!user) {
+      setError('You must be logged in to add a new workout')
+      return
+    }
 
     const workout = {title, load, reps}
     
@@ -20,7 +28,8 @@ const WorkoutForm = () => {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+         'Authorization': `Bearer ${user.token}`,
       }
     })
     const json = await response.json()

@@ -2,13 +2,24 @@ import {useWorkoutsContext} from '../hooks/useWorkoutsContext';
 import { Tooltip } from '@mui/material';
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import {useAuthContext} from '../hooks/useAuthContext';
 
 const WorkoutDetails = ({workout}) => {
     const {dispatch} = useWorkoutsContext()
+    const {user} = useAuthContext()
 
     const handlerDelete = async () =>{
+          
+        if(!user){
+            return
+        }
+
         const response = await fetch('http://localhost:4000/api/workouts/' + workout._id, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`,
+            }
         })
         const json = await response.json()
         console.log(json)

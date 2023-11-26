@@ -3,8 +3,10 @@ const express = require('express');
 const router = express.Router();
 const {createWorkout , getWorkouts,
      getWorkout , deleteWorkout,updateWorkout} = require('../controller/workoutController')
+const requireAuth = require('../middleware/requireAuth')
 
- 
+// apply middleware for authoriazation and it require authentication for all  workouts routes
+router.use(requireAuth)
 
 // Making a GET request
 router.get('/', getWorkouts)
