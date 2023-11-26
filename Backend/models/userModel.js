@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema  = mongoose.Schema;
 const bcrypt = require('bcrypt');
+const validator = require('validator');
 
 // Create a schema for user
 const userSchema = new Schema({
@@ -15,12 +16,28 @@ const userSchema = new Schema({
     required : true,
     trim : true,
   }
-}, {
+}, { 
   timestamps : true,
 });
 
 // Create a stactic signup method for user
 userSchema.statics.signup = async function(email, password) {
+   
+  //  Adding a validator case..
+   if (!email || !password) {
+     throw new Error('Email and password are required');
+   }
+
+   if(!validator.isEmail(email)) {
+      throw new Error('Email is invalid');
+    }
+  
+    if(!validator.isStrongPassword(password)) {
+      throw new Error('Password is not strong enough');
+    }
+ // Validator area added 
+
+
   const exists = await this.findOne({email});
   if (exists) {
     throw new Error('This Email is already exists');
