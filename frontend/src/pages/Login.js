@@ -1,20 +1,14 @@
 import { useState } from "react"
+import {useLogin} from '../hooks/useLogin'
 
 const Login = () =>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {login, error, isLoading} = useLogin();
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        const res = await fetch('http://localhost:4000/api/user/login', {
-            method : 'POST',
-            headers : {
-                'Content-Type' : 'application/json'
-            },
-            body : JSON.stringify({email, password})
-        })
-        const data = await res.json();
-        console.log(data)
+        await login(email, password);
     }
 
   return(
@@ -26,7 +20,8 @@ const Login = () =>{
 
             <label>Password : </label>
             <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button>Login</button>
+            <button disabled={isLoading}>Login</button>
+            {error && <p className="error">{error}</p>}
         </form>
     </div>
   )   

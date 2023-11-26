@@ -105,7 +105,20 @@ input.error {
 nav {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
+
+nav button {
+  background: white;
+  border: 0;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding:6px 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 nav a {
   margin-left: 10px;
 }
