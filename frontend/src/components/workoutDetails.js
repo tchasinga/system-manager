@@ -14,7 +14,7 @@ const WorkoutDetails = ({workout}) => {
             return
         }
 
-        const response = await fetch('https://managament-service-api.onrender.com/api/workouts/' + workout._id, {
+        const response = await fetch('http://localhost:4000/api/workouts/' + workout._id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
