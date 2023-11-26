@@ -26,7 +26,7 @@ const Home = () => {
     }
   }, [dispatch, user]);
 
-  // By using props methode you can access and map everywhere... 
+  // By using props methode you can access and map everywhere...
   return (
     <div className="home">
      <div className="workouts">
