@@ -5,7 +5,7 @@ const cors = require("cors");
 
 // Call workout here to access on it
 const workoutRoutes = require("./routes/workouts");
-
+const userRoutes = require("./routes/user");
 // To use express, create an app instance
 const app = express();
 
@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 
 // Set up routes for /api/workouts
 app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes);
 
 // Connect to the database
 const myLink = process.env.MONGO_URI;
