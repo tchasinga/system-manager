@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://workours-management.onrender.com/login",
+    origin: "https://workours-management.onrender.com",
     credentials: true,
   })
 );
