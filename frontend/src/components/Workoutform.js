@@ -41,23 +41,23 @@ const WorkoutForm = () => {
 
   return (
     <form className="create" onSubmit={handleSubmit}> 
-      <h3>Add a New Workout</h3>
+      <h3>Make your workout </h3>
 
-      <label>Excersize Title:</label>
+      <label>Set your Exercise : </label>
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
         value={title}
       />
 
-      <label>Load (in kg):</label>
+      <label>Loads in (in ):</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
         value={load}
       />
 
-      <label>Number of Reps:</label>
+      <label>Reps :</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
@@ -65,7 +65,7 @@ const WorkoutForm = () => {
       />
 
     <Tooltip title="add new program" arrow placement="bottom">
-    <button>Add...</button>
+    <button>send request</button>
     </Tooltip>
       {error && <div className="error">{error}</div>}
     </form>
