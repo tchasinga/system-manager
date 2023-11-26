@@ -7,7 +7,7 @@ const WorkoutDetails = ({workout}) => {
     const {dispatch} = useWorkoutsContext()
 
     const handlerDelete = async () =>{
-        const response = await fetch('https://management-api-location.onrender.com/api/workouts/' + workout._id, {
+        const response = await fetch('http://localhost:4000/api/workouts/' + workout._id, {
             method: 'DELETE'
         })
         const json = await response.json()
