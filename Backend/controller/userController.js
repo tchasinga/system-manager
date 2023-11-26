@@ -1,3 +1,5 @@
+const User = require ('../models/userModel')
+
 // Loging user information
 const loginUser = async (req, res) => {
   res.json({mssg : 'the user in logen in'})
