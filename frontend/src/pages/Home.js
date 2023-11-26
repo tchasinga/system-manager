@@ -16,7 +16,7 @@ const Home = () => {
     };
 
     fetchWorkout();
-  }, []);
+  }, [dispatch]);
 
   // By using props methode you can access and map everywhere... 
   return (
