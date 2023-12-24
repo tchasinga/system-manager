@@ -1,5 +1,6 @@
 import { useState } from "react"
 import {useLogin} from '../hooks/useLogin'
+import Load from "../Download/Load";
 
 const Login = () =>{
     const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ const Login = () =>{
 
             <label>Password : </label>
             <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button disabled={isLoading}>{isLoading ? 'Login...' : 'Login'}</button>
+            <button disabled={isLoading}>{isLoading ? <h1 className="Success"><Load/></h1> : 'Login'}</button>
             {error && <p className="error">{error}</p>}
         </form>
     </div>
