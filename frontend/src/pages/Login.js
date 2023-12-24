@@ -21,7 +21,8 @@ const Login = () =>{
 
             <label>Password : </label>
             <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button disabled={isLoading}>{isLoading ? <h1 className="Success"><Load/></h1> : 'Login'}</button>
+            <button disabled={isLoading}>{isLoading ? 'Loging ...' : 'Login'}</button>
+            <button>{isLoading && <h1 className="Success"><Load/></h1>}</button>
             {error && <p className="error">{error}</p>}
         </form>
     </div>
