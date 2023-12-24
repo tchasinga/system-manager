@@ -25,7 +25,6 @@ const Login = () => {
           {isLoading ? 'Logging...' : 'Login'}
         </button>
 
-        {/* Display loading indicator separately */}
         {isLoading && <h1 className="Success"><Load /></h1>}
 
         {error && <p className="error">{error}</p>}
