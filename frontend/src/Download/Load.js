@@ -11,7 +11,6 @@ export default function Load() {
         speed="2"
         color="black"
       ></l-ring>
-      ;
     </>
   );
 }
