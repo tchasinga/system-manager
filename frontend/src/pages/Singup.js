@@ -21,7 +21,7 @@ const Singup = () =>{
 
             <label>Password : </label>
             <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button disabled={isLoading}>Sign-up</button>
+            <button disabled={isLoading}></button>
             {error && <p className="error">{error}</p>}
         </form>
     </div>
