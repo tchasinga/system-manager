@@ -14,3 +14,5 @@ export default function Load() {
     </>
   );
 }
+
+// this code is for the loading spinner
