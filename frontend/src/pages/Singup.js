@@ -32,4 +32,5 @@ const Singup = () =>{
   )   
 }
 
+// adding loading pages 
 export default Singup
